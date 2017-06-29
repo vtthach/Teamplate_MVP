@@ -2,10 +2,10 @@
 <template
     format="3"
     revision="1"
-    name="My MVP template"
+    name="MVP Template Feature"
     description="MVP generator">
 
-    <category value="Dagger" />
+    <category value="Dagger2" />
 	<!-- FeatureName -->
 	<parameter
         id="applicationName"
@@ -68,7 +68,7 @@
     <!-- 128x128 thumbnails relative to template.xml -->
     <thumbs>
         <!-- default thumbnail is required -->
-        <thumb>teamplates_presenter.png</thumb>
+        <thumb>teamplates_presenter.jpg</thumb>
     </thumbs>
 
     <globals file="globals.xml.ftl" />
