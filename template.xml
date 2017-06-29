@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<template
+    format="3"
+    revision="1"
+    name="My MVP template"
+    description="MVP generator">
+
+    <category value="Dagger" />
+	<!-- FeatureName -->
+	<parameter
+        id="applicationName"
+        name="Application class Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        default="Application"
+        help="Application class name" />
+		
+	<!-- FeatureName -->
+	<parameter
+        id="featureName"
+        name="Feature Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        suggest="${layoutToActivity(layoutName)}"
+        default="MyFeature"
+        help="Feature name" />
+		
+	<!-- Fragment Layout Id -->
+	<parameter
+        id="fragmentLayoutId"
+        name="Fragment Layout Name"
+        type="string"
+        constraints="nonempty"
+        suggest="${camelCaseToUnderscore(featureName)}_fragment"
+        default="my_feature_fragment"
+        help="Fragment layout name" />
+		
+	<!-- apiUrl -->
+	<parameter
+        id="apiUrl"
+        name="Url retrofit"
+        type="string"
+        constraints="nonempty"
+        suggest="${featureName}"
+        default=""
+        help="Url retrofit with host address (ie: mobile/login)" />
+		
+	<!-- api method -->
+	<parameter
+        id="apiMethod"
+        name="Api method"
+        type="enum"
+        constraints="nonempty"
+        default="POST"
+        help="Url retrofit with host address (ie: mobile/login)" >
+		<option id="POST" default="true">POST</option>
+        <option id="GET">GET</option>
+	</parameter>
+
+	<!-- Package name -->
+	<parameter
+		id="packageName"
+		name="Package name"
+		type="string"
+		constraints="package"
+		default="com.mycompany.myapp" />
+
+    <!-- 128x128 thumbnails relative to template.xml -->
+    <thumbs>
+        <!-- default thumbnail is required -->
+        <thumb>teamplates_presenter.png</thumb>
+    </thumbs>
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>
