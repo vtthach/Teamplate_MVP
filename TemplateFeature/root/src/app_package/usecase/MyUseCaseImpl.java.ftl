@@ -24,7 +24,7 @@ public class ${featureName}UseCaseImpl extends BaseUseCase implements ${featureN
     @Override
     public Observable<${featureName}Result> get${featureName}() {
         return repository.get${featureName}(getRequest())
-                .map(${featureName}Result::new)
+                .map(${featureName}Result::transform)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io());
     }

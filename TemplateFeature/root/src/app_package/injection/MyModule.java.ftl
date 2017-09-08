@@ -15,8 +15,6 @@ import dagger.Module;
 import dagger.Provides;
 import retrofit2.Retrofit;
 
-import static ${packageName}.Constants.Names.RETROFIT_SELECTED;
-
 @Module
 @PerView
 public class ${featureName}Module {
@@ -34,7 +32,7 @@ public class ${featureName}Module {
 
     @Provides
     @PerView
-    ${featureName}Contractor.${featureName}Presenter provideSignUpPresenter(${featureName}PresenterImpl presenter) {
+    ${featureName}Contractor.${featureName}Presenter providePresenter(${featureName}PresenterImpl presenter) {
         return presenter;
     }
 
@@ -46,7 +44,7 @@ public class ${featureName}Module {
 
     @Provides
     @PerView
-    public ${featureName}ApiService provide${featureName}ApiService(@Named(RETROFIT_SELECTED) Retrofit retrofit) {
+    public ${featureName}ApiService provide${featureName}ApiService(Retrofit retrofit) {
         return retrofit.create(${featureName}ApiService.class);
     }
 

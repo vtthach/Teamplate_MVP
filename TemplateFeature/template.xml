@@ -2,8 +2,8 @@
 <template
     format="3"
     revision="1"
-    name="MVP Template Feature"
-    description="MVP generator">
+    name="Sf MVP"
+    description="Sf new mvp generator">
 
     <category value="Dagger2" />
 	<!-- FeatureName -->
