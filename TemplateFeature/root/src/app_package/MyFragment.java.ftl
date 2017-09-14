@@ -12,8 +12,6 @@ import ${packageName}.features.${featureName?lower_case}.injection.${featureName
 
 import javax.inject.Inject;
 
-import butterknife.BindView;
-
 public class ${featureName}Fragment extends BasePresenterFragment<${featureName}Contractor.${featureName}Presenter> implements ${featureName}Contractor.${featureName}View {
 
     @Inject

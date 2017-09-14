@@ -6,7 +6,7 @@
     description="Sf new mvp generator">
 
     <category value="Dagger2" />
-	<!-- FeatureName -->
+	<!-- Application Name -->
 	<parameter
         id="applicationName"
         name="Application class Name"
